@@ -29,6 +29,6 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        Toast.makeText(this,"listView was clicked at position"+position , Toast.LENGTH_LONG);
+        Toast.makeText(this,"listView was clicked at position"+position , Toast.LENGTH_LONG).show();
     }
 }

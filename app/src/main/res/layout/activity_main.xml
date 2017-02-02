@@ -24,9 +24,10 @@
 <ImageButton
     android:layout_width="48dp"
     android:layout_height="48dp"
-    android:background="@color/White"
-    android:layout_centerVertical="true"
+    android:background="@android:color/transparent"
+    android:src="@drawable/btstyle"
     android:layout_marginLeft="12dp"
+    android:layout_centerVertical="true"
     android:layout_alignParentLeft="true"/>
     <ImageButton
         android:layout_width="48dp"

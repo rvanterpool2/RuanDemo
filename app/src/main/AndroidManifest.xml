@@ -19,7 +19,8 @@
         <activity
             android:name=".ListViewActivity"
             android:label="@string/title_activity_list_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ViewPagerActivity"></activity>
     </application>
 
 </manifest>

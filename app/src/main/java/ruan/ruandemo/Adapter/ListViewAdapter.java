@@ -82,7 +82,7 @@ public class ListViewAdapter extends BaseAdapter {
         } else {
             holder.textView1.setVisibility(View.INVISIBLE);
             holder.textView3.setVisibility(View.VISIBLE);
-            holder.lp.setMargins(0,0,UtilDensity.dip2px(mContext,95),0);
+            holder.lp.setMargins(0,0,UtilDensity.dip2px(mContext,50),0);
             holder.lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
             holder.textView2.setBackgroundResource(R.drawable.chatto_bg_focused);
             holder.textView2.setLayoutParams(holder.lp);

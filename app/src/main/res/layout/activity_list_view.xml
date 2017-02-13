@@ -13,7 +13,7 @@
         android:id="@+id/List_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_orange_light"
+        android:background="@android:color/holo_green_light"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absolutex="8dp"
         ></ListView>

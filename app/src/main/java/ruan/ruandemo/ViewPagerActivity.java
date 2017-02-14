@@ -17,8 +17,9 @@ import ruan.ruandemo.fragment.LoginFragment;
 
 public class ViewPagerActivity extends AppCompatActivity {
 private ViewPager viewPager;
-    private TabLayout tabLayout;
     private ArrayList<Fragment>fragmentList=new ArrayList<Fragment>();
+    private TabLayout tabLayout;
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,16 +7,24 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import ruan.ruandemo.Util.UtilLog;
 
 public class MainActivity extends BaseActivity {
 private ImageButton bt1;
     private ImageButton bt3;
+    @OnClick(R.id.bt2)
+public void button2Click(){
+        toActivity(DialogActivity.class);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialView();
+        ButterKnife.bind(this);
+
     }
     private void initialView() {
         bt1 = (ImageButton) findViewById(R.id.bt1);

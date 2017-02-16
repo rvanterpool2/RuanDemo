@@ -2,6 +2,7 @@ package ruan.ruandemo;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.DialogPreference;
@@ -9,12 +10,12 @@ import android.support.annotation.IdRes;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-
 import java.util.ArrayList;
-
+import ruan.ruandemo.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import ruan.ruandemo.dialog.CustomDialog;
 
 /**
  * Created by Ruan on 2/13/2017.
@@ -48,10 +49,24 @@ public class DialogActivity extends BaseActivity {
                 inputDialog();
                 break;
             case R.id.rb8:
+                customDialog();
                 break;
             default:
         }
 
+    }
+    private void customDialog(){
+       final CustomDialog dialog=new CustomDialog(this, new CustomDialog.ICustomDialogEventListener() {
+           @Override
+           public void onClickListener() {
+               Intent intent= new Intent();
+               intent.putExtra("message ","Dialog");
+               setResult(RESULT_OK, intent);
+               toastShort("OK Button was clicked");
+               finish();
+           }
+       });
+        dialog.show();
     }
 
     private void inputDialog() {

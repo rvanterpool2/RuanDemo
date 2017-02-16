@@ -8,5 +8,7 @@
     <color name="Yellow">#FFFF00</color>
     <color name="Lime">#00FF00</color>
     <color name="Black">#000000</color>
+    <color name="Silver">#C0C0C0</color>
+    <color name="Grey">#808080</color>
 
 </resources>

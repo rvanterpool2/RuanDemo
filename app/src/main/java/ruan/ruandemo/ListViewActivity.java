@@ -58,19 +58,31 @@ private void createFakeResult(){
     listResult.add("Q");
 }
     private void initialView() {
-        listView= (ListView) findViewById(R.id.List_view);
-        View view= getLayoutInflater().inflate(R.layout.list_view_header, null);
-        listView= (ListView) findViewById(R.id.List_view);
-        LinearLayout listViewHeader=(LinearLayout)view.findViewById(R.id.list_view_header);
-        ListViewAdapter listViewAdapter= new ListViewAdapter(this, listResult);
+        listView = (ListView) findViewById(R.id.List_view);
+        View view = getLayoutInflater().inflate(R.layout.list_view_header, null);
+
+        LinearLayout listViewHeader = (LinearLayout) view.findViewById(R.id.list_view_header);
+        ListViewAdapter listViewAdapter = new ListViewAdapter(this, listResult);
         listView.addHeaderView(listViewHeader);
-        TextView tv =new TextView(this);
+
+        TextView tv = new TextView(this);
         tv.setText("We have no more content");
         tv.setTextSize(28);
         tv.setGravity(Gravity.CENTER);
         listView.addFooterView(tv);
+
         listView.setAdapter(listViewAdapter);
         listView.setOnItemClickListener(this);
+
+        viewPager = (ViewPager) view.findViewById(R.id.view_pager_header);
+        fragmentList.add(new LoginFragment());
+        fragmentList.add(new ContentFragment());
+        fragmentList.add(new HistoryFragment());
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
+        viewPagerAdapter.setContent(fragmentList);
+        viewPager.setAdapter(viewPagerAdapter);
+//        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+//        tabLayout.setupWithViewPager(viewPager);
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

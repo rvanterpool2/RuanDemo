@@ -3,15 +3,22 @@
     android:id="@+id/list_view_header"
     android:orientation="vertical" android:layout_width="match_parent"
  android:background="@color/White"
-    android:layout_height="match_parent"
+    android:layout_height="150dp"
 >
-    <TextView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_header"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textColor="@color/Black"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="ListViewHeader"/>
+        android:layout_height="150dp">
+
+        </android.support.v4.view.ViewPager>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="@color/Black"-->
+        <!--android:textSize="40sp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:text="ListViewHeader"/>-->
+
 
 </LinearLayout>

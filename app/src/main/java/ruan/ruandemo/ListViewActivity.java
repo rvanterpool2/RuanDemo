@@ -41,7 +41,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
 private void createFakeResult(){
     listResult.add("AAAAAAAAAA");
     listResult.add("BBBBB");
-    listResult.add("C");
+    listResult.add("CCC");
     listResult.add("D");
     listResult.add("E");
     listResult.add("F");

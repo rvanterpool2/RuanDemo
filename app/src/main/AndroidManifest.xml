@@ -24,6 +24,8 @@
         <activity android:name=".ViewPagerActivity" />
         <activity android:name=".BaseActivity"></activity>
         <activity android:name=".DialogActivity"/>
+        <activity android:name=".LaunchModeActivity"/>
+
     </application>
 
 </manifest>

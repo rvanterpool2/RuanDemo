@@ -3,7 +3,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-    android:background="@color/Black">
+              android:background="@color/Black">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,25 +20,28 @@
         android:layout_alignParentBottom="true"
         android:background="@color/Black"
         >
-        <ImageButton
+        <Button
             android:id="@+id/bt1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:text="to a"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
-        <ImageButton
-            android:id="@+id/bt2"
+        <Button
+            android:id="@+id/bt2b"
             android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:text="to B"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
-        <ImageButton
+        <Button
             android:id="@+id/bt3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:text="to C"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
@@ -51,4 +54,5 @@
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
     </LinearLayout>
+
 </LinearLayout>

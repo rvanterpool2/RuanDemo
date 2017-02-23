@@ -21,6 +21,11 @@ public void button2Click(){
         Intent intent= new Intent(this , DialogActivity.class);
         startActivityForResult(intent, 2);
     }
+    @OnClick(R.id.right_button)
+    public void rightbuttonClick(){
+        Intent intent= new Intent(this , LaunchModeActivity.class);
+        startActivityForResult(intent, 2);
+    }
 
     @Override
     protected void onStart() {

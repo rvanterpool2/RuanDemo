@@ -30,7 +30,6 @@
             android:background="@color/Silver"/>
         <Button
             android:id="@+id/bt2b"
-            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="to B"

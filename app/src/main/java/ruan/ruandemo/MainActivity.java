@@ -23,7 +23,7 @@ public void button2Click(){
     }
     @OnClick(R.id.right_button)
     public void rightbuttonClick(){
-        Intent intent= new Intent(this , LaunchModeActivity.class);
+        Intent intent= new Intent(this ,Activity_A.class);
         startActivityForResult(intent, 2);
     }
 

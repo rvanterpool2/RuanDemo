@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/Black">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:textColor="@color/Silver"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="400sp"
+        />
+    <LinearLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Black"
+        >
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="to a"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@color/Silver"/>
+        <Button
+            android:id="@+id/bt2b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="to B"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@color/Silver"/>
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="to C"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@color/Silver"/>
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="to D"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@color/Silver"/>
+    </LinearLayout>
+
+</LinearLayout>

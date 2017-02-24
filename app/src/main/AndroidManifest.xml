@@ -24,8 +24,10 @@
         <activity android:name=".ViewPagerActivity" />
         <activity android:name=".BaseActivity"></activity>
         <activity android:name=".DialogActivity"/>
-        <activity android:name=".LaunchModeActivity"/>
-
+        <activity android:name=".Activity_A" android:launchMode="standard"/>
+        <activity android:name=".Activity_B" android:launchMode="singleTop"/>
+        <activity android:name=".Activity_C" android:launchMode="singleTask"/>
+        <activity android:name=".Activity_D" android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

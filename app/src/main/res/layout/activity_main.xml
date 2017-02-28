@@ -70,13 +70,22 @@
                 android:background="@color/White"/>
 
         </LinearLayout>
-    <ListView
-
-        android:layout_above="@id/tool_bar"
-        android:layout_below="@id/title_bar"
-        android:layout_width="match_parent"
+    <FrameLayout
         android:layout_height="match_parent"
-        android:background="@color/White"></ListView>
+        android:layout_width="match_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_above="@id/tool_bar"
+        android:background="@color/White"
+        >
+        <Button
+            android:id="@+id/main_timer_bt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Timer"
+            android:textAllCaps="false"
+            android:textSize="20dp"/>
+
+    </FrameLayout>
 
 
 </RelativeLayout>

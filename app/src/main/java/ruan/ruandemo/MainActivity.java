@@ -1,10 +1,8 @@
 package ruan.ruandemo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.BounceInterpolator;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import ruan.ruandemo.R;
@@ -26,7 +24,11 @@ public void button2Click(){
         Intent intent= new Intent(this ,Activity_A.class);
         startActivityForResult(intent, 2);
     }
+    @OnClick(R.id.main_timer_bt)
+    public void toTimer(){
+        toActivity(ActivityTimer.class);
 
+    }
     @Override
     protected void onStart() {
         super.onStart();

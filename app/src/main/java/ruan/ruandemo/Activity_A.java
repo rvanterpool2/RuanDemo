@@ -1,17 +1,9 @@
 package ruan.ruandemo;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BaseTransientBottomBar;
 import android.view.View;
-
-import butterknife.OnClick;
-
-import static ruan.ruandemo.R.id.bt1;
-import static ruan.ruandemo.R.id.bt2b;
 
 /**
  * Created by Ruan on 2/23/2017.
@@ -36,11 +28,11 @@ public class Activity_A extends Activity implements View.OnClickListener {
                 startActivity(new Intent(this, Activity_B.class));
                 break;
 
-            case R.id.bt3:
+            case R.id.bt3a:
                 startActivity(new Intent(this, Activity_C.class));
                 break;
 
-            case R.id.bt4:
+            case R.id.bt4a:
                 startActivity(new Intent(this, Activity_D.class));
                 break;
 

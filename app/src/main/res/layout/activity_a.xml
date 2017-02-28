@@ -39,7 +39,7 @@
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
         <Button
-            android:id="@+id/bt3"
+            android:id="@+id/bt3a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="to C"
@@ -48,7 +48,7 @@
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
         <Button
-            android:id="@+id/bt4"
+            android:id="@+id/bt4a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="to D"

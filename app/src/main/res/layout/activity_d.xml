@@ -24,7 +24,8 @@
             android:id="@+id/bt1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="to a"
+            android:text="to A"
+            android:onClick="onClick"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
@@ -33,22 +34,25 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="to B"
+            android:onClick="onClick"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
         <Button
-            android:id="@+id/bt3"
+            android:id="@+id/bt3a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="to C"
+            android:onClick="onClick"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>
         <Button
-            android:id="@+id/bt4"
+            android:id="@+id/bt4a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="to D"
+            android:onClick="onClick"
             android:layout_weight="1"
             android:layout_margin="6dp"
             android:background="@color/Silver"/>

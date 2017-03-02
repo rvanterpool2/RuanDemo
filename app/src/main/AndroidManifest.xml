@@ -38,6 +38,8 @@
             android:launchMode="singleInstance"/>
         <activity android:name=".ActivityTimer">
         </activity>
+        <activity android:name=".activity_Animation">
+        </activity>
     </application>
 
 </manifest>

@@ -77,13 +77,25 @@
         android:layout_above="@id/tool_bar"
         android:background="@color/White"
         >
-        <Button
-            android:id="@+id/main_timer_bt"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="Timer"
-            android:textAllCaps="false"
-            android:textSize="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/main_timer_bt"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="Timer"
+                android:textAllCaps="false"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/animamtion_bt"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Animation"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
 
     </FrameLayout>
 

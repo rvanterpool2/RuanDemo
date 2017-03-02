@@ -29,8 +29,12 @@ public void button2Click(){
         toActivity(ActivityTimer.class);
 
     }
-    @Override
-    protected void onStart() {
+    @OnClick(R.id.animamtion_bt)
+    public void toAnimation() {
+        toActivity(activity_Animation.class);
+    }
+        @Override
+    protected void onStart(){
         super.onStart();
         toastShort("onStart");
     }

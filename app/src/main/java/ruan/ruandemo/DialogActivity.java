@@ -1,4 +1,5 @@
 package ruan.ruandemo;
+import android.os.Handler;
 import android.os.Message;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -22,7 +23,7 @@ import ruan.ruandemo.dialog.CustomDialog;
 public class DialogActivity extends BaseActivity {
     private int checkedID;
     public final int DIALOG= 12345;
-    android.os.Handler mHandler= new android.os.Handler() {
+    Handler mHandler= new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -102,7 +103,7 @@ public class DialogActivity extends BaseActivity {
         progressDialog.setTitle("Downloading");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setMax(MAX_PROGRESS);
-        progressDialog.show();
+       progressDialog.show();
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -116,13 +117,15 @@ public class DialogActivity extends BaseActivity {
                         e.printStackTrace();
                     }
                 }
-                progressDialog.cancel();
-                Bundle bundle= new Bundle();
-                bundle.putString("msg","Download Success");
-                Message msg= Message.obtain();
-                msg.what=DIALOG;
+
+                Bundle bundle = new Bundle();
+                bundle.putString("msg", "Download Success");
+                Message msg = Message.obtain();
+                msg.what = DIALOG;
                 msg.setData(bundle);
-                mHandler.handleMessage(msg);
+                mHandler.sendMessage(msg);
+                progressDialog.cancel();
+
             }
         }).start();
     }

@@ -53,7 +53,35 @@ public void button2Click(){
         toActivity(AnimatorActivity.class);
     }
     @OnClick(R.id.Quiz_bt)
-    public void toQuiz4() {toActivity(Quiz4.class);
+    public void Quiz4(){
+        final Quiz4 dialog = new Quiz4(this, new Quiz4.ICustomDialogEventListener() {
+            @Override
+            public void onClickListener() {
+                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onClick2Listener() {
+                Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onClickCancel() {
+                Intent intent = new Intent(MainActivity.this,ViewPagerActivity.class);
+                intent.putExtra("key","value");
+                Bundle bundle = new Bundle();
+                bundle.putInt("Integer", 12345);
+                Book book = new Book();
+                book.setName("Android");
+                book.setAuthor("Laura");
+                bundle.putSerializable("book", book);
+                intent.putExtras(bundle);
+                startActivityForResult(intent, 1);
+            }
+        });
+        dialog.show();
     }
         @Override
     protected void onStart(){

@@ -3,9 +3,10 @@ package ruan.ruandemo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +26,7 @@ public class BaseActivity extends AppCompatActivity {
     public void toastShort(String content) {
         Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
     }
+
+    public abstract void onClick(View v);
 }
 

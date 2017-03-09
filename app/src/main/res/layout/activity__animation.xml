@@ -71,7 +71,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="45sp"
-        android:background="@color/Lime"
+        android:background="@color/Black"
         android:layout_centerInParent="true"/>
         <!--tools:layout_editor_absoluteY="100dp"-->
         <!--tools:layout_editor_absoluteX= "85dp"/>-->

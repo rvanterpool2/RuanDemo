@@ -65,5 +65,10 @@ public class ActivityTimer extends BaseActivity {
             ButterKnife.bind(this);
             timerButton.setOnClickListener(start);
         }
+
+    @Override
+    public void onClick(View v) {
+
     }
+}
 

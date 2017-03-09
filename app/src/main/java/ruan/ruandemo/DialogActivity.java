@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AlertDialog;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import java.util.ArrayList;
@@ -261,6 +262,11 @@ public class DialogActivity extends BaseActivity {
                 checkedID= checkedId;
             }
         });
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }

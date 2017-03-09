@@ -22,7 +22,6 @@
             android:label="@string/title_activity_list_view"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ViewPagerActivity"/>
-        <activity android:name=".BaseActivity"/>
         <activity android:name=".DialogActivity"/>
         <activity
             android:name=".Activity_A"
@@ -39,6 +38,10 @@
         <activity android:name=".ActivityTimer">
         </activity>
         <activity android:name=".activity_Animation">
+        </activity>
+        <activity android:name=".AnimatorActivity">
+        </activity>
+        <activity android:name=".Quiz_4">
         </activity>
     </application>
 

@@ -71,6 +71,7 @@
 
         </LinearLayout>
     <FrameLayout
+        android:id="@+id/main_fl"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_below="@id/title_bar"
@@ -93,10 +94,24 @@
                 android:layout_height="60dp"
                 android:text="Animation"
                 android:textSize="20sp"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/animator_bt"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Animator"
+                android:textSize="20sp"
                 android:textAllCaps="false"
                 />
         </LinearLayout>
-
+        <Button
+            android:id="@+id/Quiz_bt"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:text="Quiz4"
+            android:textSize="20sp"
+            android:textAllCaps="false"/>
     </FrameLayout>
 
 

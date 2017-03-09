@@ -58,7 +58,13 @@ TextView tv;
             }
         });
         }
-        private void intialAnimation(){
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    private void intialAnimation(){
         alphaAnimation= AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
             scaleAnimation= AnimationUtils.loadAnimation(this, R.anim.anim_scale);
             setAnimation= AnimationUtils.loadAnimation(this, R.anim.anim_set);

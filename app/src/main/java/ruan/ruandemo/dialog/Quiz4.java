@@ -3,6 +3,7 @@ package ruan.ruandemo.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.widget.RadioGroup;
 
@@ -19,56 +20,46 @@ import static ruan.ruandemo.R.style.dialog;
 
 public class Quiz4 extends Dialog {
     private int checkedID;
-
-    @BindView(R.id.rdg)
-    RadioGroup radioGroup;
-
-    @OnClick(R.id.dialog_ok)
-    public void okClick(){
+    @BindView(R.id.rdg) RadioGroup radioGroup;
+    @OnClick(R.id.dialog_ok2)
+public void okClick(){
         if(checkedID==R.id.rb1){
-            listener.onClickListener();
+            listener.onOk1();
         }
         else if(checkedID==R.id.rb2){
-            listener.onClick2Listener();
+            listener.onOk2();
         }
-        dismiss();
+}
+
+    @OnClick(R.id.dialog_cancel)
+    public void cancelClick()
+    {
+        listener.onCancel();
     }
 
-    @OnClick(R.id.bt_cancel)
-    public void cancelClick(){
-        listener.onClickCancel();
-        dismiss();
-    }
-
-    private ICustomDialogEventListener listener;
-
+    private Quiz4.ICustomDialogEventListener listener;
     public interface ICustomDialogEventListener{
-        public void onClickListener();
-        public void onClick2Listener();
-        public void onClickCancel();
+        public void onOk1();
+        public void onOk2();
+        public void onCancel();
+
 
     }
+    public Quiz4(@NonNull Context context, Quiz4.ICustomDialogEventListener listener) {
+        super(context,R.style.dialog);
+        this.listener= listener;
 
-
-    public Quiz4(@NonNull Context context, ICustomDialogEventListener listener) {
-        super(context, dialog);
-        this.listener = listener;
-        //dialog.show();
     }
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz);
         ButterKnife.bind(this);
-
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                checkedID = checkedId;
-
+            public void onCheckedChanged(RadioGroup group,@IdRes int checkedId) {
+                checkedID= checkedId;
             }
         });
     }
 }
-

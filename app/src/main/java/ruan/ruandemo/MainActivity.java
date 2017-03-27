@@ -17,68 +17,76 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ruan.ruandemo.Util.UtilLog;
 import ruan.ruandemo.bean.Book;
+import ruan.ruandemo.dialog.CustomDialog;
 import ruan.ruandemo.dialog.Quiz4;
 
 import static android.widget.Toast.makeText;
 import static ruan.ruandemo.R.id.text;
 
 public class MainActivity extends BaseActivity implements View.OnTouchListener {
-private ImageButton bt1;
+    private ImageButton bt1;
     private ImageButton bt3;
 
     private GestureDetector mGestureDetector;
-    @BindView(R.id.main_fl)FrameLayout fl;
+    @BindView(R.id.main_fl)
+    FrameLayout fl;
 
     @OnClick(R.id.bt2)
-public void button2Click(){
-        Intent intent= new Intent(this , DialogActivity.class);
+    public void button2Click() {
+        Intent intent = new Intent(this, DialogActivity.class);
         startActivityForResult(intent, 2);
     }
+
     @OnClick(R.id.right_button)
-    public void rightButtonClick(){
-        Intent intent= new Intent(this ,Activity_A.class);
+    public void rightButtonClick() {
+        Intent intent = new Intent(this, Activity_A.class);
         startActivityForResult(intent, 2);
     }
+
     @OnClick(R.id.main_timer_bt)
-    public void toTimer(){
+    public void toTimer() {
         toActivity(ActivityTimer.class);
 
     }
+
     @OnClick(R.id.animamtion_bt)
     public void toAnimator() {
         toActivity(activity_Animation.class);
     }
+
     @OnClick(R.id.animator_bt)
     public void toAnimation() {
         toActivity(AnimatorActivity.class);
     }
+
     @OnClick(R.id.Quiz_bt)
-    public void Quiz4(){
+    public void Quiz4() {
         final Quiz4 dialog = new Quiz4(this, new Quiz4.ICustomDialogEventListener() {
             @Override
-            public void onClickListener() {
+            public void onOk1() {
                 Intent intent = new Intent(MainActivity.this, DialogActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 2);
             }
 
             @Override
-            public void onClick2Listener() {
+            public void onOk2() {
                 Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 2);
             }
 
             @Override
-            public void onClickCancel() {
-                Intent intent = new Intent(MainActivity.this,ViewPagerActivity.class);
-                intent.putExtra("key","value");
-                Bundle bundle = new Bundle();
-                bundle.putInt("Integer", 12345);
-                Book book = new Book();
+            public void onCancel() {
+                Intent intent=new Intent(MainActivity.this, ViewPagerActivity.class);
+                intent.putExtra("key", "value");
+                Bundle bundle= new Bundle();
+                bundle.putInt("integer",12345);
+                intent.putExtras(bundle);
+                Book book= new Book();
                 book.setName("Android");
-                book.setAuthor("Laura");
+                book.setAuthor("Yan");
                 bundle.putSerializable("book", book);
                 intent.putExtras(bundle);
-                startActivityForResult(intent, 1);
+                startActivityForResult(intent,1);
             }
         });
         dialog.show();

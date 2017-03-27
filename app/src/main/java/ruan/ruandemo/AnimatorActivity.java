@@ -91,7 +91,6 @@ public class AnimatorActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animator);
         ButterKnife.bind(this);
-
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

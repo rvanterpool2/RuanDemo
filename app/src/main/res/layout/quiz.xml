@@ -1,80 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
->
-    <RelativeLayout
-        android:id="@+id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:background="@color/Red">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/Grey">
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Tittle"
-        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:layout_centerInParent="true"
-        android:textColor="@color/Black"/>
-        </RelativeLayout>
-    <FrameLayout
-        android:id="@+id/main_fl"
-        android:layout_height="match_parent"
+        android:textSize="36sp"
+        />
+    <View
         android:layout_width="match_parent"
-        android:layout_below="@id/title_bar"
-        android:layout_above="@id/tool_bar"
-        android:background="@color/White"
-        >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/White"/>
     <RadioGroup
         android:id="@+id/rdg"
         android:layout_width="match_parent"
-        android:layout_height="350dp">
-    <RadioButton
-        android:id="@+id/rb1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DialogActivity"/>
-    <RadioButton
-        android:id="@+id/rb2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text=" ListViewActivity"/>
+        android:layout_height="200dp">
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DialogActivity"/>
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ListViewActivity"/>
     </RadioGroup>
-    </LinearLayout>
-    </FrameLayout>
     <LinearLayout
-        android:id="@+id/tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/holo_green_light">
-
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <Button
-        android:id="@+id/bt_cancel"
-        android:layout_width="0dp"
-        android:onClick="onClick"
-        android:layout_height="match_parent"
+        android:id="@+id/dialog_ok2"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textSize="36sp"/>
+    <Button
+        android:id="@+id/dialog_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Cancel"
-        android:layout_margin="6dp"
-        android:background="@color/White"/>
-    <Button
-        android:id="@+id/bt_ok"
-        android:onClick="onClick"
-        android:text="OK"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_margin="6dp"
-        android:background="@color/White"/>
-    </LinearLayout>
+        android:textSize="36sp"/>
+        </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

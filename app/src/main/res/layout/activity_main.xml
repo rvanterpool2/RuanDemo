@@ -23,6 +23,7 @@
         android:textColor="@color/White"/>
 
 <ImageButton
+    android:id="@+id/left_button"
     android:layout_width="48dp"
     android:layout_height="48dp"
     android:background="@android:color/transparent"
@@ -114,6 +115,80 @@
             android:textSize="20sp"
             android:textAllCaps="false"/>
     </FrameLayout>
+    <LinearLayout
+        android:id="@+id/Hw4"
+        android:layout_marginTop="58dp"
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar"
+        android:background="@android:color/black"
+        android:layout_marginLeft="-330dp"
+        android:paddingLeft="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="MainActivity"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="70dp"
+            android:textAllCaps="false"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="ListViewActivity"
+            android:textSize="25sp"
+            android:paddingLeft="70dp"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            />
+        <TextView
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="ViewPagerActivity"
+        android:textSize="25sp"
+        android:paddingLeft="70dp"
+        android:textColor="@color/White"
+        android:textAllCaps="false"
+        />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Activity A"
+            android:textSize="25sp"
+            android:paddingLeft="70dp"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Activity B"
+            android:textSize="25sp"
+            android:paddingLeft="70dp"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Activity C"
+            android:textSize="25sp"
+            android:paddingLeft="70dp"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Activity D"
+            android:textSize="25sp"
+            android:paddingLeft="70dp"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            />
+</LinearLayout>
 
 
 </RelativeLayout>

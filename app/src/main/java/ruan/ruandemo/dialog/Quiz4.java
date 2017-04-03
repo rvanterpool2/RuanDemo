@@ -22,14 +22,14 @@ public class Quiz4 extends Dialog {
     private int checkedID;
     @BindView(R.id.rdg) RadioGroup radioGroup;
     @OnClick(R.id.dialog_ok2)
-public void okClick(){
+    public void okClick(){
         if(checkedID==R.id.rb1){
             listener.onOk1();
         }
         else if(checkedID==R.id.rb2){
             listener.onOk2();
         }
-}
+    }
 
     @OnClick(R.id.dialog_cancel)
     public void cancelClick()
@@ -63,3 +63,5 @@ public void okClick(){
         });
     }
 }
+
+

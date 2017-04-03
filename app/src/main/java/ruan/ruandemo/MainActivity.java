@@ -1,5 +1,6 @@
 package ruan.ruandemo;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +10,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.widget.ListView;
 
 import butterknife.BindView;
 import ruan.ruandemo.R;
@@ -26,8 +29,10 @@ import static ruan.ruandemo.R.id.text;
 public class MainActivity extends BaseActivity implements View.OnTouchListener {
     private ImageButton bt1;
     private ImageButton bt3;
-
+    int counter=0;
     private GestureDetector mGestureDetector;
+    @BindView(R.id.Hw4)
+    LinearLayout linear ;
     @BindView(R.id.main_fl)
     FrameLayout fl;
 
@@ -57,6 +62,22 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener {
     @OnClick(R.id.animator_bt)
     public void toAnimation() {
         toActivity(AnimatorActivity.class);
+    }
+    @OnClick(R.id.left_button)
+    public void left_button(){
+        if(counter==0){
+            ObjectAnimator animator = ObjectAnimator.ofFloat(linear, "translationX", 0, 950, 950,950,950);
+            animator.setDuration(1000);
+            animator.start();
+            counter++;
+        }
+        else{
+            ObjectAnimator animator = ObjectAnimator.ofFloat(linear, "translationX", 950, 0, 0,0,0);
+            animator.setDuration(1000);
+            animator.start();
+            counter=0;
+        }
+
     }
 
     @OnClick(R.id.Quiz_bt)
@@ -188,6 +209,12 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener {
         public boolean onSingleTapConfirmed(MotionEvent e){
             UtilLog.logD("MyGesture","onSingleTap"+ e);
             toastShort("onSingleTap");
+            if(counter==1) {
+                ObjectAnimator animator = ObjectAnimator.ofFloat(linear, "translationX", 950, 0, 0, 0); //translationY
+                animator.setDuration(1000);
+                counter=0;
+                animator.start();
+            }
             return true;
         }
         @Override
@@ -206,7 +233,20 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener {
             Context context= getApplicationContext();
             Toast toast = Toast.makeText(context, "onFling" ,Toast.LENGTH_SHORT);
             //toastShort("onFling");
+            if(counter==0){
+                ObjectAnimator animator = ObjectAnimator.ofFloat(linear, "translationX", 0, 950, 950,950,950);
+                animator.setDuration(1000);
+                animator.start();
+                counter++;
+            }
+            else{
+                ObjectAnimator animator = ObjectAnimator.ofFloat(linear, "translationX", 950, 0, 0,0,0);
+                animator.setDuration(1000);
+                animator.start();
+                counter=0;
+            }
             toast.show();
+
             return true;
         }
         @Override

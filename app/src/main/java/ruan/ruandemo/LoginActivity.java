@@ -373,8 +373,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         @Override
         protected void onCancelled() {
-            mAuthTask = null;
-            showProgress(false);
+
         }
     }
 
